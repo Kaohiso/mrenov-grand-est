@@ -1,16 +1,20 @@
 export default function Footer() {
   return (
-    <footer className="h-72 py-6 bg-darkblue text-white font-bold flex flex-col items-center justify-center">
-      <section aria-labelledby="footer-contact" className="flex items-center justify-center">
-        <div className="w-3xl mx-auto">
+    <footer className="py-10 bg-darkblue text-white font-bold flex flex-col items-center justify-center">
+      <section
+        aria-labelledby="footer-contact"
+        className="flex items-center justify-center w-full"
+      >
+        <div className="w-full md:w-3/5 mx-auto px-4 md:px-0">
           <h2
             id="footer-contact"
-            className="text-4xl font-black text-white mb-4"
+            className="text-3xl md:text-4xl font-black text-white mb-6"
           >
             Prendre contact
           </h2>
 
-          <div className="flex justify-between">
+          <div className="flex flex-col md:flex-row justify-between gap-8">
+            {/* Contact */}
             <address className="not-italic flex flex-col gap-2">
               <p className="text-xl font-semibold text-softbrown">Contact</p>
               <a
@@ -24,6 +28,7 @@ export default function Footer() {
               </a>
             </address>
 
+            {/* Adresse */}
             <address className="not-italic flex flex-col gap-2">
               <p className="text-xl font-semibold text-softbrown">Adresse</p>
               <a

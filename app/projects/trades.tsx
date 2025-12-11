@@ -13,33 +13,31 @@ const trades = [
 
 export default function Trades() {
   return (
-    <section className="flex bg-[#E1CFBF]/50">
-      {/* Left image */}
-      {/* <div className="relative w-1/3 h-96">
-        <Image
-          src="/images/trades/trades.png"
-          alt="Métiers"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div> */}
-
-      {/* Right grid */}
-      <div className="w-full grid grid-cols-8 gap-4 py-4  font-bold">
-        {/* <p className="col-span-8 text-2xl">Nos différents corps de métier</p> */}
-
+    <section className="flex bg-[#E1CFBF]/50 py-6">
+      <div
+        className="
+          w-full 
+          grid 
+          grid-cols-2 
+          sm:grid-cols-3 
+          md:grid-cols-4 
+          lg:grid-cols-6 
+          xl:grid-cols-8
+          gap-6 
+          place-items-center
+        "
+      >
         {trades.map((trade) => (
-          <div key={trade.alt} className="flex flex-col items-center">
-            <div className="relative w-32 h-32">
+          <div key={trade.alt} className="flex flex-col items-center text-center">
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 xl:w-32 xl:h-32">
               <Image
                 src={trade.src}
                 alt={trade.alt}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
-            <p>{trade.alt}</p>
+            <p className="mt-2 font-bold">{trade.alt}</p>
           </div>
         ))}
       </div>
