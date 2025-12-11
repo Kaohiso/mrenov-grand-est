@@ -1,7 +1,12 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="flex justify-between items-center px-10 py-6 shadow-md">
       <Image
@@ -11,13 +16,31 @@ export default function Header() {
         height={50}
         className="object-contain"
       />
+
       <nav>
-        <ul className="flex gap-8 ">
+        <ul className="flex gap-8">
           <li>
-            <Link href="/">A propos</Link>
+            <Link
+              href="/"
+              className={`${
+                pathname === "/" ? "font-bold text-softbrown" : ""
+              }`}
+            >
+              A propos
+            </Link>
           </li>
+
           <li>
-            <Link href="/projects">Projets</Link>
+            <Link
+              href="/projects"
+              className={`${
+                pathname.startsWith("/projects")
+                  ? "font-bold text-softbrown"
+                  : ""
+              }`}
+            >
+              Projets
+            </Link>
           </li>
         </ul>
       </nav>

@@ -4,8 +4,8 @@ export default function EyeCatching() {
   return (
     <div className="relative h-72">
       <Image
-        src="/images/content/eye-catching.png"
-        alt="mrenov-logo"
+        src="/images/content/eye-catching.jpg"
+        alt="eye-catching"
         fill
         className="object-cover"
       />
