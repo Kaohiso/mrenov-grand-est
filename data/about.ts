@@ -1,7 +1,7 @@
 const dataAbout = [
   {
     id: 1,
-    img: "/images/content/eye-catching.png",
+    img: "/images/draw/living-room.png",
     title: "MRENOV Grand-Est",
     subtitle: "Acteur régionale de la rénovation",
     description: [
@@ -22,7 +22,7 @@ const dataAbout = [
   },
   {
     id: 2,
-    img: "/images/content/eye-catching.png",
+    img: "/images/draw/lorraine.png",
     subtitle: "Notre région d’action",
     description: [
       {

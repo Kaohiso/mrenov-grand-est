@@ -29,7 +29,7 @@ export default function ImageTextBlock({
           src={img}
           alt={id.toString()}
           fill
-          className="object-cover rounded-xl"
+          className="object-contain"
         />
       </div>
 

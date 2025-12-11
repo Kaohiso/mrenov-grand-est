@@ -1,7 +1,7 @@
 const dataCarousel = [
   {
     id: 1,
-    img: "/images/content/eye-catching.png",
+    img: "/images/draw/bird.png",
     title: "Les valeurs qui nous font grandir",
     subtitle: "Indépendance",
     description: [
@@ -12,7 +12,7 @@ const dataCarousel = [
   },
   {
     id: 2,
-    img: "/images/content/eye-catching.png",
+    img: "/images/draw/craftsman.png",
     subtitle: "Le savoir faire",
     description: [
       {
@@ -22,7 +22,7 @@ const dataCarousel = [
   },
   {
     id: 3,
-    img: "/images/content/eye-catching.png",
+    img: "/images/draw/puzzle.png",
     subtitle: "L’Adaptabilité",
     description: [
       {

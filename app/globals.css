@@ -9,7 +9,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-lato);
-  --color-darkblue: #2C3E46;
+  --color-darkblue: #2c3e46;
   --color-softbrown: #998360;
 }
 
@@ -28,4 +28,18 @@ body {
 
 address {
   font-style: normal !important;
+}
+
+.my-masonry-grid {
+  display: flex;
+  margin-left: -15px;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 15px; /* gap */
+}
+
+.my-masonry-grid_column > * {
+  margin-bottom: 15px;
 }

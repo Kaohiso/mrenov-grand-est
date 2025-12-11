@@ -4,7 +4,7 @@ import { dataAbout } from "@/data/about";
 export default function About() {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="flex flex-col w-3/4 gap-y-12 my-8">
+      <div className="flex flex-col w-3/5 gap-y-12 my-8">
         {dataAbout.map((item) => {
           return (
             <ImageTextBlock

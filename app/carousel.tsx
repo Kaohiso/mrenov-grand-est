@@ -41,7 +41,7 @@ export default function HeroCarousel({
       >
         {items.map((item) => (
           <div key={item.id} className="min-w-full flex justify-center">
-            <div className="w-3/4">
+            <div className="w-3/5">
               <ImageTextBlock {...item} rightImage={item.id % 2 === 0} />
             </div>
           </div>
