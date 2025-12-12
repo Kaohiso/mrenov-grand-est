@@ -12,7 +12,7 @@ interface HeroCarouselProps {
 export default function HeroCarousel({
   items,
   autoPlay = true,
-  interval = 5000,
+  interval = 10000,
 }: HeroCarouselProps) {
   const [index, setIndex] = useState(0);
 
@@ -24,7 +24,7 @@ export default function HeroCarousel({
     }, interval);
 
     return () => clearInterval(timer);
-  }, [items.length, autoPlay, interval]);
+  }, [items.length, autoPlay, interval, index]);
 
   const goNext = () => setIndex((prev) => (prev + 1) % items.length);
   const goPrev = () =>
