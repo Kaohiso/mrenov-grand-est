@@ -82,7 +82,7 @@ export default function HeroCarousel({
             key={i}
             onClick={() => setIndex(i)}
             className={`
-              w-2 h-2 sm:w-3 sm:h-3 rounded-full
+              w-2 h-2 sm:w-2 sm:h-2 rounded-full
               transition
               ${i === index ? "bg-softbrown" : "bg-white"}
             `}

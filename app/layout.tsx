@@ -21,7 +21,7 @@ const geLato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "MRenov",
+  title: "MRenov Grand-Est – Rénovation et pose de bardage pour particuliers et professionnels",
   description:
     "MRenov est une entreprise spécialisée dans la rénovation dans " +
     "toute la région Grand Est, avec un savoir-faire particulier dans la " +
