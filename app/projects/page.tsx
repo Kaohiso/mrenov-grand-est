@@ -5,11 +5,56 @@ import path from "path";
 import Footer from "@/components/Footer";
 import Trades from "./trades";
 import { Metadata } from "next";
+import ProjectsSchema from "./schema";
 
 export const metadata: Metadata = {
-  title: "MRenov – Projets de rénovation : Plâtrerie, Électricité, Plomberie, Carrelage, Menuiserie, Charpente, Couverture, Gros œuvre",
+  title: "Nos Projets de Rénovation – Plâtrerie, Électricité, Plomberie | MRenov Grand-Est",
   description:
-    "Découvrez les réalisations de MRenov : plâtrerie, électricité, plomberie, carrelage, menuiserie, charpente, couverture et gros œuvre. Nos projets reflètent notre expertise en rénovation dans tout le Grand-Est.",
+    "Découvrez nos réalisations en rénovation : plâtrerie, électricité, plomberie, carrelage, menuiserie, charpente, couverture et gros œuvre dans le Grand-Est.",
+  keywords: [
+    "projets rénovation",
+    "réalisations MRenov",
+    "Grand-Est",
+    "plâtrerie",
+    "électricité",
+    "plomberie",
+    "carrelage",
+    "menuiserie",
+    "charpente",
+    "couverture",
+    "gros œuvre",
+    "Nancy",
+    "Seichamps"
+  ],
+  openGraph: {
+    title: "Nos Projets de Rénovation | MRenov Grand-Est",
+    description: "Découvrez nos réalisations en plâtrerie, électricité, plomberie, carrelage et plus",
+    url: "https://mrenov-grand-est.com/projects",
+    siteName: "MRenov",
+    images: [
+      {
+        url: "/images/og-image-projects.jpg", // Image spécifique à cette page
+        width: 1200,
+        height: 630,
+        alt: "Projets de rénovation MRenov dans le Grand-Est",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Nos Projets de Rénovation | MRenov",
+    description: "Découvrez nos réalisations en rénovation complète",
+    images: ["/images/og-image-projects.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  alternates: {
+    canonical: "https://mrenov-grand-est.com/projects",
+  },
 };
 
 export default function Projects() {
@@ -22,6 +67,7 @@ export default function Projects() {
 
   return (
     <div>
+      <ProjectsSchema imageCount={images.length} />
       <Header />
       <main>
         <Trades />

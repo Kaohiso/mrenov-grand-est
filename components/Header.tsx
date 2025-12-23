@@ -11,10 +11,10 @@ export default function Header() {
     <header className="flex justify-between items-center px-10 py-6 shadow-md">
       <Image
         src="/images/header/mrenov-logo.png"
-        alt="mrenov-logo"
+        alt="Logo MRenov - Expert en rénovation et bardage"
         width={100}
         height={50}
-        className="object-contain"
+        className="w-[100px] h-auto object-contain"
       />
 
       <nav>

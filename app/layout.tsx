@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Libre_Baskerville, Lato } from "next/font/google";
 import "./globals.css";
+import LocalBusinessSchema from "./schema";
 
 const geLibreBaskerville = Libre_Baskerville({
   weight: ["400", "700"],
@@ -21,7 +22,8 @@ const geLato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "MRenov Grand-Est – Rénovation et pose de bardage pour particuliers et professionnels",
+  title:
+    "MRenov Grand-Est – Rénovation et pose de bardage pour particuliers et professionnels",
   description:
     "MRenov est une entreprise spécialisée dans la rénovation dans " +
     "toute la région Grand Est, avec un savoir-faire particulier dans la " +
@@ -37,7 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${geLibreBaskerville.variable} ${geLato.variable} antialiased`}>
+      <head>
+        <LocalBusinessSchema />
+      </head>
+      <body
+        className={`${geLibreBaskerville.variable} ${geLato.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

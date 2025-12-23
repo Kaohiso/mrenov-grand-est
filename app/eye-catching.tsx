@@ -5,9 +5,10 @@ export default function EyeCatching() {
     <div className="relative h-72">
       <Image
         src="/images/content/eye-catching.jpg"
-        alt="eye-catching"
+        alt="Projet de rénovation de façade et bardage par MRenov dans le Grand-Est"
         fill
         className="object-cover"
+        priority
       />
 
       <div className="absolute inset-0 bg-black/50"></div>
@@ -19,6 +20,7 @@ export default function EyeCatching() {
         <h1 className="space-y-2">
           <span className="block">Transformation des espaces</span>
           <span className="block">Constructions de rêves</span>
+          <p className="sr-only">Rénovation et bardage dans le Grand-Est</p>
         </h1>
       </div>
     </div>

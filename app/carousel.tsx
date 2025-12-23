@@ -31,22 +31,22 @@ export default function HeroCarousel({
     setIndex((prev) => (prev - 1 + items.length) % items.length);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#E1CFBF] py-16 px-4 md:px-10">
+    <section
+      aria-labelledby="projects-carousel"
+      className="relative w-full overflow-hidden bg-[#E1CFBF] py-16"
+    >
+      <h2 id="projects-carousel" className="sr-only">
+        Nos réalisations récentes
+      </h2>
       {/* Slides container */}
       <div
         className="flex transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {items.map((item) => (
-          <div
-            key={item.id}
-            className="shrink-0 w-full flex justify-center"
-          >
+          <div key={item.id} className="shrink-0 w-screen flex justify-center px-4 md:px-10">
             <div className="w-full md:w-4/5 lg:w-3/5">
-              <ImageTextBlock
-                {...item}
-                rightImage={item.id % 2 === 0}
-              />
+              <ImageTextBlock {...item} rightImage={item.id % 2 === 0} />
             </div>
           </div>
         ))}
@@ -55,24 +55,26 @@ export default function HeroCarousel({
       {/* Navigation arrows */}
       <button
         onClick={goPrev}
+        aria-label="Compétence précédente"
         className="
           absolute left-2 sm:left-4 
           top-1/2 -translate-y-1/2 
           p-2 sm:p-3 hover:cursor-pointer
         "
       >
-        <p className="text-lg sm:text-xl">&#10094;</p>
+        <span className="text-lg sm:text-xl">&#10094;</span>
       </button>
 
       <button
         onClick={goNext}
+        aria-label="Compétence suivante"
         className="
           absolute right-2 sm:right-4 
           top-1/2 -translate-y-1/2 
           p-2 sm:p-3 hover:cursor-pointer
         "
       >
-        <p className="text-lg sm:text-xl">&#10095;</p>
+        <span className="text-lg sm:text-xl">&#10095;</span>
       </button>
 
       {/* Indicators */}
